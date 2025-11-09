@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="home">
+        <header>
+            <div class="logo">
+                <p>BA</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </header>
+
+        <content>
+            <div class="intro">
+                <h5>BENJOMARK F. ANDOY</h5>
+                <div class="intro-goal">
+                    <h1>HAY I'M BENJOMARK</h1>
+                    <h2>WEB DEVELOPER</h2>
+                </div>
+                
+                <p>a passionate developer and designer who creates clean, functional, and user-focused digital experiences that blend
+                creativity with technology.</p>
+            </div>
+        <div class="profile">
+            <div class="flip">
+                <img src="image/profile.jpg" alt="Profile Picture" class="front">
+                <img src="image/ashenbubs-dance.gif" alt="Profile Picture Flip" class="back">
+            </div>
+        </div>
+
+        </content>
+
+        <!-- Cards Section -->
+        <div class="cards-container">
+            <!-- Skills Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3>Skills</h3>
+                <p>Explore my technical expertise and core competencies</p>
+                <ul>
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Problem Solving</li>
+                    <li>Team Collaboration</li>
+                </ul>
+                <button class="card-button">View Skills</button>
+            </div>
+
+            <!-- Resume Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h3>Resume</h3>
+                <p>Download my complete professional resume and work history</p>
+                <ul>
+                    <li>Work Experience</li>
+                    <li>Education</li>
+                    <li>Certifications</li>
+                    <li>Projects</li>
+                </ul>
+                <button class="card-button">Download Resume</button>
+            </div>
+
+            <!-- Qualifications Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                </div>
+                <h3>Qualifications</h3>
+                <p>My academic achievements and professional certifications</p>
+                <ul>
+                    <li>Bachelor's Degree</li>
+                    <li>Professional Certifications</li>
+                    <li>Specialized Training</li>
+                    <li>Awards & Recognition</li>
+                </ul>
+                <button class="card-button">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="javaScript.js"></script>
+</body>
+
+</html>

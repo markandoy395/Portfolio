@@ -1,6 +1,6 @@
  // Infinite Typing Animation
       const typingText = document.querySelector('.typing-text');
-const texts = ["HAY I'M BENJOMARK", "WEB DEVELOPER"]; // array of texts
+const texts = ["HEY I'M BENJOMARK", "WEB DEVELOPER"]; // array of texts
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -77,3 +77,61 @@ setTimeout(typeWriter, 500);
             document.body.style.overflow = 'auto';
             e.target.reset();
         });
+        // Add this to your existing javaScript.js file
+
+// Projects Auto-Scroll Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    const viewAllBtn = document.querySelector('.view-all-projects-btn');
+    let isAutoScrolling = true;
+    let scrollInterval;
+    let isExpanded = false;
+
+    // Start auto-scrolling
+    function startAutoScroll() {
+        if (!isAutoScrolling || isExpanded) return;
+        
+        scrollInterval = setInterval(() => {
+            if (projectsGrid.scrollLeft >= projectsGrid.scrollWidth - projectsGrid.clientWidth) {
+                projectsGrid.scrollLeft = 0;
+            } else {
+                projectsGrid.scrollLeft += 2;
+            }
+        }, 30);
+    }
+
+    // Stop auto-scrolling
+    function stopAutoScroll() {
+        clearInterval(scrollInterval);
+    }
+
+    // Pause on hover
+    projectsGrid.addEventListener('mouseenter', stopAutoScroll);
+    projectsGrid.addEventListener('mouseleave', () => {
+        if (isAutoScrolling && !isExpanded) {
+            startAutoScroll();
+        }
+    });
+
+    // View All Projects button functionality
+    viewAllBtn.addEventListener('click', function() {
+        isExpanded = !isExpanded;
+        
+        if (isExpanded) {
+            projectsGrid.classList.add('expanded');
+            viewAllBtn.textContent = 'Show Less';
+            viewAllBtn.classList.add('active');
+            stopAutoScroll();
+            isAutoScrolling = false;
+        } else {
+            projectsGrid.classList.remove('expanded');
+            viewAllBtn.textContent = 'View All Projects';
+            viewAllBtn.classList.remove('active');
+            isAutoScrolling = true;
+            startAutoScroll();
+        }
+    });
+
+    // Start auto-scrolling on page load
+    startAutoScroll();
+});

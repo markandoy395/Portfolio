@@ -135,3 +135,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start auto-scrolling on page load
     startAutoScroll();
 });
+const scrollButton = document.getElementById('scroll');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollButton.classList.add('show');
+            } else {
+                scrollButton.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Add scale animation on hover (additional enhancement)
+        scrollButton.addEventListener('mouseenter', () => {
+            scrollButton.style.transform = 'scale(1.15)';
+        });
+
+        scrollButton.addEventListener('mouseleave', () => {
+            if (!scrollButton.matches(':active')) {
+                scrollButton.style.transform = 'scale(1)';
+            }
+        });
